@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+  <title>Music</title>
+
+  <!-- Javascript:  JQuery from a content distribution network (CDN) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+
+<!-- Our own style sheet -->
+<link rel="stylesheet" href="/static/css/calc.css" />
+
+<body>
+
+  <h1>Hello World</h1>
+ 
+  <!--
+  -- If there are any warnings or other messages from a prior
+  -- request to the server, 
+  -- they appear above the rest of the content, just until the next 
+  -- action.  (This is only on request/response transactions that
+  -- result in regenerating the page, not on every xmlhttp request.) 
+  -->
+
+
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  {% endwith %}
+
+  <a href="/cp" target="blank"><button class='btn btn-default'>CP!</button></a>
+  <a href="/download" target="blank"><button class='btn btn-default'>Download!</button></a>
+  <a href="/show" target="blank"><button class='btn btn-default'>Show!</button></a>
+
+
+
+</body>
+
+</html>

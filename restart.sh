@@ -1,0 +1,4 @@
+docker stop musiccompanion_music_companion
+docker rm musiccompanion_music_companion
+docker image rm musiccompanion_music_companion
+docker-compose up --build
